@@ -13,4 +13,4 @@ match scale:
         converted_value = (temp - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
         print(f"Temperature in Celcius is {converted_value}")
     case _:
-        print("Invalid temperature. Please enter a numeric value")
+        print("Invalid temperature. Please enter a numeric value.")
