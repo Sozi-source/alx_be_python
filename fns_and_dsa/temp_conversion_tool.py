@@ -1,14 +1,14 @@
 FAHRENHEIT_TO_CELSIUS_FACTOR = 5/9
 CELSIUS_TO_FAHRENHEIT_FACTOR = 9/5
 
-def convert_to_celsius(fahrenheit):
-   return (fahrenheit-32) * FAHRENHEIT_TO_CELSIUS_FACTOR
+temp = float(input("Enter the temperature to convert:"))
+scale = input("Is this temperature in Celsius or Fahrenheit? (C/F):").upper()
 
-def convert_to_fahrenheit(celsius):
-    return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
+match scale:
+    case "C":
+        converted_value = (temp * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
+        print(f"Temperature in fahrenheit is {converted_value}")
 
-temp_f = float(input("Enter temperature in fahreheit: "))
-print(f"In Celcius: ", convert_to_celsius(temp_f))
-
-temp_c = float(input("Enter temperature in Celcius: "))
-print(f"In fahrenheit: ", convert_to_fahrenheit(temp_c))
+    case "F":
+        converted_value = (temp - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
+        print(f"Temperature in Celcius is {converted_value}")
