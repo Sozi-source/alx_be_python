@@ -10,7 +10,13 @@ def main():
     denominator = sys.argv[2]
 
     result = safe_divide(numerator, denominator)
-    print(f"The result of the division is {result}")
+
+    if isinstance(result, float):
+        # Only print this for successful division
+        print(f"The result of the division is {result}")
+    else:
+        # Print error messages directly
+        print(result)
 
 if __name__ == "__main__":
     main()
