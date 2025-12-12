@@ -18,11 +18,6 @@ class Circle(Shape):
     def area(self):
         return math.pi * self.radius ** 2
     
-
-rect = Rectangle(7, 9)
-print(rect.area())  
-
-c = Circle(14)
-print(c.area())
+ 
 
 
